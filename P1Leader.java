@@ -23,7 +23,7 @@ public class P1Leader implements Runnable{
 
                     // If ctr = n - 1, everyones been through the labyrinth.
                     if (ctr == n - 1) {
-                        System.out.println("Leader has taken " + ctr + " cakes. All guests have visited the labyrinth.");
+                        System.out.println("Leader has taken " + ctr + " cupcakes. All guests have visited the labyrinth.");
                         return;
                     }
                 }

@@ -14,9 +14,10 @@ To compile:
 
     javac P1Main.java P1Leader.java P1Follower.java
 
-TO run:
+To run:
 
     java P1Main
+
     
 ## Problem 2
 
