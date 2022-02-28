@@ -1,8 +1,9 @@
 import java.util.concurrent.atomic.AtomicReference;
 
 public class CLHLock {
-    public class QNode {
+    public static class QNode {
         public boolean locked;
+
         public QNode() {}
     }
 

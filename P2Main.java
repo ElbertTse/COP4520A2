@@ -7,8 +7,29 @@ public class P2Main {
         Scanner scanner = new Scanner(System.in);
         int n;
 
-        System.out.println("How many threads? ");
+        System.out.print("How many guests? ");
         n = scanner.nextInt();
+
+        Thread[] threads = new Thread[n];
+        
+        try {
+            CLHLock myLock = new CLHLock();
+
+            for (int i = 0; i < n; i++) {
+                threads[i] = new Thread(new P2Guest(myLock));
+            }
+
+            for (Thread thread : threads) {
+                thread.start();
+            }
+
+            for (Thread thread : threads) {
+                thread.join();
+            }
+        } catch (Exception e) {
+            System.out.println(e.toString());
+            e.printStackTrace();
+        }
 
         scanner.close();
     }
