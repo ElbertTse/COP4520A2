@@ -1,10 +1,10 @@
+// Elbert Tse, COP 4520, Spring 2022, Assignment 2
+
 import java.util.concurrent.atomic.AtomicReference;
 
 public class CLHLock {
     public static class QNode {
         public boolean locked;
-
-        public QNode() {}
     }
 
     AtomicReference<QNode> tail;
@@ -12,19 +12,15 @@ public class CLHLock {
     ThreadLocal<QNode> myNode;
 
     public CLHLock() {
-        tail = new AtomicReference<QNode>(null);
+        tail = new AtomicReference<QNode>(new QNode());
         
         myNode = new ThreadLocal<QNode>() {
-            protected QNode initalValue() {
+            protected QNode initialValue() {
                 return new QNode();
             }
         };
 
-        myPred = new ThreadLocal<QNode>() {
-            protected QNode initalValue() {
-                return null;
-            }
-        };
+        myPred = new ThreadLocal<QNode>();
     }
 
     public void lock() {
