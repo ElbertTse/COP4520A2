@@ -1,6 +1,6 @@
-import java.util.concurrent.atomic.AtomicBoolean;
-
 // Elbert Tse, COP 4520, Spring 2022, Assignment 2
+
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class P1Leader implements Runnable{
     AtomicBoolean seesCake;
