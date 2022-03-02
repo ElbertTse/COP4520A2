@@ -9,7 +9,7 @@ public class P2Guest implements Runnable {
     public void run() {
         try {
             myLock.lock();
-            System.out.println(Thread.currentThread().getName() + " has entered the showroom.");
+            System.out.println(Thread.currentThread().getName() + " has seen the vase.");
             myLock.unlock();
         } catch (Exception e) {
             System.out.println(e.toString() + " on " + Thread.currentThread().getName());

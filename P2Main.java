@@ -26,6 +26,8 @@ public class P2Main {
             for (Thread thread : threads) {
                 thread.join();
             }
+
+            System.out.println("All guests have seen the vase.");
         } catch (Exception e) {
             System.out.println(e.toString());
             e.printStackTrace();
