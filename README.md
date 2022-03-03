@@ -12,26 +12,18 @@ Cake should be an atomic boolean. Leader should set it to false, others should s
 
 This implementation will ask the user for how many guests/threads there are.
 
-To compile:
-
-    javac P1Main.java P1Leader.java P1Follower.java
-
 To run:
 
-    java P1Main
+    make p1
 
     
 ## Problem 2
 
 The guests should choose strategy 3. To implement strategy 3, I implemented a CLH Lock based on the example in the textbook but with minor modifications since it does not work verbatim.
 
-To compile:
-
-    javac P2Main.java P2Guest.java CLHLock.java
-
 To run:
 
-    java P2Main
+    make p2
 
 ### Advantages
 * Better than 1st and 2nd strategy since it guarantees that each guest will enter the showroom since CLH Lock is a queue lock.

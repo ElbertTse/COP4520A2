@@ -1,0 +1,4 @@
+build:
+	javac P1Main.java P1Leader.java P1Follower.java;
+	java P1Main;
+	rm *.class;

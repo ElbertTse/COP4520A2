@@ -1,0 +1,4 @@
+build:
+	javac P2Main.java P2Guest.java CLHLock.java;
+	java P2Main;
+	rm *.class;
